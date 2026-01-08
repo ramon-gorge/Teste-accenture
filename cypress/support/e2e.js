@@ -14,4 +14,7 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+import './api_commands'
+import './gui_commands'
+import '@faker-js/faker'
+import 'cypress-plugin-api'
