@@ -2,11 +2,11 @@ import { faker } from '@faker-js/faker';
 import '@4tw/cypress-drag-drop';
 
 beforeEach(() => {
-    cy.visit('https://demoqa.com/');
     cy.on('uncaught:exception', () => false);
 });
 
 Cypress.Commands.add('preencherPracticeForm', () => {
+    cy.visit('https://demoqa.com/')
     //cria usuario usando a biblioteca faker
     const firstName = faker.person.firstName();
     const lastName = faker.person.lastName();
@@ -42,6 +42,7 @@ Cypress.Commands.add('preencherPracticeForm', () => {
 });
 
 Cypress.Commands.add('alerstsAndFrames', () => {
+    cy.visit('https://demoqa.com/')
     cy.contains('Alerts, Frame & Windows').click();
     cy.contains('Browser Windows').click();
     // Preparação do Stub (epião) logo antes de abrir a janela
@@ -53,6 +54,7 @@ Cypress.Commands.add('alerstsAndFrames', () => {
 });
 
 Cypress.Commands.add('registrarUsuario', () => {
+    cy.visit('https://demoqa.com/')
     const firstName = faker.person.firstName();
     const lastName = faker.person.lastName();
     const email = faker.internet.email();
@@ -99,6 +101,7 @@ Cypress.Commands.add('deletarUsuario', () => {
 });
 
 Cypress.Commands.add('progressBar25', () => {
+    cy.visit('https://demoqa.com/')
     cy.contains('Widgets').click();
     cy.contains('Progress Bar').click();
     cy.get('#startStopButton').click();
@@ -115,6 +118,7 @@ Cypress.Commands.add('progressBar100', () => {
 });
 
 Cypress.Commands.add('acessarSortable', () => {
+    cy.visit('https://demoqa.com/')
     cy.contains('Interactions').click({ force: true });
     cy.contains('Sortable').click();
 });
