@@ -1,4 +1,4 @@
-# Teste de Automação Serverest
+# Teste de Automação
 
 ## Descrição do Projeto
 
