@@ -37,11 +37,9 @@ Siga os passos abaixo para clonar o repositório e instalar as dependências:
     ```bash
     npm i cypress-plugin-api
     ```
-
    ```bash
     npm install --save-dev @4tw/cypress-drag-drop
-    ```
-    
+    ```    
 
 ## Executar os Testes
 
