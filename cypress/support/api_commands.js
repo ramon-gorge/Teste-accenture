@@ -1,6 +1,7 @@
 import { faker } from '@faker-js/faker';
 
 //TESTES NEGATIVOS
+
 Cypress.Commands.add('senhaInvalida', () => {
     const userName = faker.person.firstName();
     Cypress.env('userName', userName);
@@ -54,7 +55,9 @@ Cypress.Commands.add('alugarLivrosUsuarioNaoAutenticado', () => {
     }).then((response) => { return response });
 });
 
+
 //TESTES POSITIVOS
+
 Cypress.Commands.add('criarUsuarioApi', () => {
     // cria usuario usando a bibilioteca faker
     const userName = faker.person.firstName();
@@ -70,6 +73,7 @@ Cypress.Commands.add('criarUsuarioApi', () => {
     // armazena usuario e senha em variaveis de ambiente
     Cypress.env('userName', userName);
     Cypress.env('password', password);
+
     cy.api({
         method: 'POST',
         url: 'https://demoqa.com/Account/v1/User',
